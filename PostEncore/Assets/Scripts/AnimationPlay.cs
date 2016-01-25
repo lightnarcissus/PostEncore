@@ -21,7 +21,7 @@ public class AnimationPlay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        player.GetComponent<MouseLook>().enabled = false;
+      //  player.GetComponent<MouseLook>().enabled = false;
         mainCam.GetComponent<MouseLook>().enabled = false;
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Animator>().enabled = false;
@@ -81,7 +81,7 @@ public class AnimationPlay : MonoBehaviour {
             drawOut = true;
             player.transform.rotation = Quaternion.Slerp(player.transform.rotation, neededRotation, Time.deltaTime * 6f);
             hands.GetComponent<AudioSource>().enabled = true;
-            player.GetComponent<MouseLook>().enabled = false;
+      //      player.GetComponent<MouseLook>().enabled = false;
             mainCam.GetComponent<MouseLook>().enabled = false;
 
             player.GetComponent<Animator>().enabled = false;
@@ -121,7 +121,7 @@ public class AnimationPlay : MonoBehaviour {
             {
                 drawOut = true;
                 once = false;
-                player.GetComponent<MouseLook>().enabled = true;
+              //  player.GetComponent<MouseLook>().enabled = true;
                 mainCam.GetComponent<MouseLook>().enabled = true;
                 player.GetComponent<Animator>().enabled = true;
                 player.GetComponent<CharacterController>().enabled = true;

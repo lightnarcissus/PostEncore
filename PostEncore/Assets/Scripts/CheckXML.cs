@@ -21,11 +21,12 @@ public class CheckXML : MonoBehaviour {
 		//Debug.Log (_info);
 		if(int.Parse(_info)==0)
 		{
-			Debug.Log ("0");
+			//Debug.Log ("0");
+			input=false;
 		}
 		if(int.Parse(_info)==1)
 		{
-			Debug.Log ("1");
+			//Debug.Log ("1");
 			input=true;
 		}
 
