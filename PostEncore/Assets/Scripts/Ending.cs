@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.VR;
 public class Ending : MonoBehaviour {
 
 
@@ -19,6 +19,7 @@ public class Ending : MonoBehaviour {
 	void Start () {
         
         randEnding = Random.Range(0, 4);
+		VRSettings.renderScale = 1.5f;
 	}
 	
 	// Update is called once per frame

@@ -72,10 +72,12 @@ public class AnimationPlay : MonoBehaviour {
         if(CheckXML.input)
         {
            clapping=true;
-			CheckXML.input=false;   
+			Debug.Log ("clap now");
+		//	CheckXML.input=false;   
         }
         if (clapping)
         {
+		//	Debug.Log("should be clapping")
             neededRotation = Quaternion.LookRotation(curtain.transform.position - player.transform.position);
             if(!once)
             drawOut = true;
@@ -87,10 +89,10 @@ public class AnimationPlay : MonoBehaviour {
             player.GetComponent<Animator>().enabled = false;
             player.GetComponent<CharacterController>().enabled = false;
             waitTimer = 0f;
-            playTimer += Time.deltaTime;
+            playTimer += Time.fixedDeltaTime;
 			left.GetComponent<Animator>().enabled = true;
 			right.GetComponent<Animator>().enabled=true;
-            if (playTimer < 0.27f)
+            if (playTimer < 0.2f)
             {
 
 
