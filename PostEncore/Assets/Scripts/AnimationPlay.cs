@@ -27,7 +27,7 @@ public class AnimationPlay : MonoBehaviour {
         player.GetComponent<Animator>().enabled = false;
         hands.GetComponent<Animator>().enabled = false;
         hands.GetComponent<AudioSource>().enabled = false;
-        mainCam.GetComponent<Vignetting>().enabled = true;
+        mainCam.GetComponent<VignetteAndChromaticAberration>().enabled = true;
 
 	}
 	
@@ -130,10 +130,10 @@ public class AnimationPlay : MonoBehaviour {
 
             }
 
-            if (mainCam.GetComponent<Vignetting>().intensity < 10f)
-                mainCam.GetComponent<Vignetting>().intensity += 0.1f;
-            if (mainCam.GetComponent<Vignetting>().chromaticAberration < 20f)
-                mainCam.GetComponent<Vignetting>().chromaticAberration += 0.1f;
+            if (mainCam.GetComponent<VignetteAndChromaticAberration>().intensity < 10f)
+                mainCam.GetComponent<VignetteAndChromaticAberration>().intensity += 0.1f;
+            if (mainCam.GetComponent<VignetteAndChromaticAberration>().chromaticAberration < 20f)
+                mainCam.GetComponent<VignetteAndChromaticAberration>().chromaticAberration += 0.1f;
 
             if (mainCam.GetComponent<AudioLowPassFilter>().cutoffFrequency >= 50)
                 mainCam.GetComponent<AudioLowPassFilter>().cutoffFrequency -= 50;
