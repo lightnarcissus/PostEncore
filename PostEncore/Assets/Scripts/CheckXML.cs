@@ -7,6 +7,7 @@ using System.Text;
 
 public class CheckXML : MonoBehaviour {
 	public static bool input=false;
+    public Animator clapper;
 	// Use this for initialization
 	void Start () {
 	
@@ -23,12 +24,14 @@ public class CheckXML : MonoBehaviour {
 		{
 			//Debug.Log ("0");
 			input=false;
+            clapper.SetBool("Clapping", false);
 		}
 		if(int.Parse(_info)==1)
 		{
 			//Debug.Log ("1");
 			input=true;
-		}
+            clapper.SetBool("Clapping", true);
+        }
 
 	}
 }

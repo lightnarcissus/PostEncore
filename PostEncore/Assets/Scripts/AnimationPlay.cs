@@ -106,10 +106,10 @@ public class AnimationPlay : MonoBehaviour {
                 clapping = false;
                 playTimer = 0f;
             }
-            if (mainCam.GetComponent<Vignetting>().intensity > 0.1f)
-                mainCam.GetComponent<Vignetting>().intensity -= 0.1f;
-            if (mainCam.GetComponent<Vignetting>().chromaticAberration > 0.1f)
-                mainCam.GetComponent<Vignetting>().chromaticAberration -= 0.1f;
+            if (mainCam.GetComponent<VignetteAndChromaticAberration>().intensity > 0.1f)
+                mainCam.GetComponent<VignetteAndChromaticAberration>().intensity -= 0.1f;
+            if (mainCam.GetComponent<VignetteAndChromaticAberration>().chromaticAberration > 0.1f)
+                mainCam.GetComponent<VignetteAndChromaticAberration>().chromaticAberration -= 0.1f;
 
             if (mainCam.GetComponent<AudioLowPassFilter>().cutoffFrequency <= 4950)
                 mainCam.GetComponent<AudioLowPassFilter>().cutoffFrequency += 100;
