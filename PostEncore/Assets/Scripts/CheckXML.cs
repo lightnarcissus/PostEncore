@@ -4,13 +4,13 @@ using System.Xml;
 using System.Xml.Serialization; 
 using System.IO; 
 using System.Text;
-
+using UnityEngine.VR;
 public class CheckXML : MonoBehaviour {
 	public static bool input=false;
     public Animator clapper;
 	// Use this for initialization
 	void Start () {
-	
+        VRSettings.renderScale = 2f;
 	}
 	
 	// Update is called once per frame
